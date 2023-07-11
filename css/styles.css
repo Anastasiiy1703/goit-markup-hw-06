@@ -28,12 +28,35 @@ ol {
     --primare-icon-bgcolor: #31D0AA;
 }
 
+
 .container {
-    width: 1158px;
+   min-width: 320px;
+   width: 396px;
+   margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline:4px solid red;
+}
+
+@media screen and (min-width:768px){
+    .container{
+        padding: 0;
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+    max-width: 1158px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 15px;
+    outline: 4px solit black;
+    }
 }
+
+
 
 .header {
     border-bottom: 1px solid #e7e9fc;
@@ -238,7 +261,23 @@ body {
 }
 
 .features-section {
+    min-width: 320px;
+    width: 368px;
+    padding: 96px 22px;
+    
+}
+@media screen and (min-width:768px) {
+    .features-section{
+   
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+    .features-section{
     padding: 120px 0;
+
+    }
 }
 
 .features-section-title {
@@ -247,21 +286,44 @@ body {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--primary-dark-color);
+    margin-bottom: 8px;
 }
 
 .features-section .list {
-    display: flex;
+    
+}
+
+@media only screen and (max-width:767){
+.features-section .list:not(:last-child){
+    margin-bottom: 72px;
+}
+}
+
+
+@media screen and (min-width:768) {
+.features-section .list {
+    display: flex ;
+    flex-wrap:wrap;
+    flex-basis: calc((100%-24px)/2);
+    grid-row: 24px;
+    grid-column: 72px;
+
+    }
+    
+}
+
+@media screen and (min-width:1200){
+    .features-section .list{
     margin: 0 auto;
     gap: 24px;
+    }
 }
+
 
 .features-section .list .list-item {
     width: calc((100% - 72px) / 4);
 }
 
-.features-section-title {
-    margin-bottom: 8px;
-}
 
 .features-description {
     font-weight: 400;
@@ -282,6 +344,12 @@ body {
     border-radius: 4px;
     margin-bottom: 8px;
 
+}
+
+@media only screen and (min-width:1200){
+    .features-section-icon{
+        display: none;
+    }
 }
 
 .doing-section {
@@ -970,3 +1038,4 @@ border: none;
     margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
