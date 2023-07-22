@@ -34,7 +34,7 @@ ol {
     max-width: 428px;
     margin-left: auto;
     margin-right: auto;
-    /* padding: 0 15px; */
+    padding: 0 15px;
 
 }
 
@@ -72,11 +72,9 @@ body {
     overflow: hidden;
 }
 
-@media only screen and (min-width: 320px) {
 .container {
     max-width: 428px;
   }
-}
 
 /*For tablet*/
 @media screen and (min-width:768px){
@@ -112,10 +110,8 @@ body {
 }
 
 /*For mobile*/
-@media only screen and (min-width: 320px){
 .header-nav .list {
    display: none;
-}
 }
 
 /*For tablet*/
@@ -132,7 +128,6 @@ body {
 }
 
 /*Fo mobile*/
-@media only screen and (min-width: 320px){
 .header-nav .link-logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -146,7 +141,6 @@ body {
     margin-right: auto;
     padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 }
 
 /*For tablet*/
@@ -199,15 +193,17 @@ body {
 
 .pages-link:hover,
 .pages-link:focus {
-    color: #404bbf;
+    color:var(--primary-button-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.active{
+color: var(--primary-button-color);
+}
+
 /*For mobile*/
-@media only screen and (min-width: 320px){
 .header-adress .list {
     display: none;
-}
 }
 
 /*For tablet*/
@@ -220,12 +216,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 1157px) {
-.header-adress .list {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-}
 
 /*For desctop*/
 @media only screen and (min-width: 1158px) {
@@ -266,7 +256,6 @@ body {
 
 
 /*For mobile*/
-@media only screen and (min-width: 320px) {
 .hero-section {
     background-color: var(--primary-dark-color);
     padding: 112px 0 112px;
@@ -280,56 +269,38 @@ body {
     display: flex;
     margin: 0 auto;
     }
-}
 
-
-@media only screen and (min-width: 320px),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-resolution: 1.5dppx),
-only screen and (min-resolution: 144dpi) {
-    .hero-section {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
-            url(../images/office-mobile-2x.jpg);
-         
-}
-
-@media only screen and (min-width: 429px) {
-    .hero-section {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
-            url(../images/office-tablet-1x.jpg);
+@media (min-resolution: 192dpi) and (min-width: 320px){
+.hero-section {
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-mobile-2x.jpg);
     }
 }
 
-@media only screen and (min-width: 429px),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-resolution: 1.5dppx),
-only screen and (min-resolution: 144dpi) {
-    .hero-section {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
-            url(../images/office-tablet-2x.jpg);
+/*For tablet*/
+@media only screen and (min-width: 768px) {
+.hero-section{
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-tablet-1x.jpg);
     }
 }
 
-@media only screen and (min-width: 769px) {
-    .hero-section {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
-            url(../images/office-deskyop-1x.jpg);
+@media (min-resolution: 192dpi) and (min-width: 768px){
+.hero-section {
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-tablet-2x.jpg);
     }
 }
 
-@media only screen and (min-width: 769px),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-resolution: 1.5dppx),
-only screen and (min-resolution: 144dpi) {
-    .hero-section {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
-            url(../images/office-mobile-2x.jpg);
+/*For desktop*/
+@media only screen and (min-width: 1158px) {
+.hero-section {
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-desktop-1x.jpg);
     }
 }
 
+@media (min-resolution: 192dpi) and (min-width: 1158px) {
+.hero-section {
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-desktop-2x.jpg);
+    }
+}
 
 /*For desktop*/
 @media only screen and (min-width: 1158px) {
@@ -401,23 +372,14 @@ only screen and (min-resolution: 144dpi) {
 
 /*For mobile*/
 .features-section {
-    max-width: 396px;
     padding:96px 0;
     margin-left: auto;
     margin-right: auto;
-
-}
-/*For tablet*/
-@media only screen and (min-width:768px) {
-.features-section{
-    max-width: 736px;
-  }
 }
 
 /*For desktop*/
 @media only screen and (min-width: 1158px) {
 .features-section{
-    max-width: 1158px;
     padding: 120px 0;
   }
 }
@@ -447,6 +409,7 @@ only screen and (min-resolution: 144dpi) {
    
   }
 }
+
 .features-section .list {
     margin-left: 8px;
     margin-right: 8px;
@@ -502,7 +465,7 @@ only screen and (min-resolution: 144dpi) {
 }
 
 /*For desktop*/
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 768px) {
 .features-description{
     font-weight: 400;
   }
@@ -589,6 +552,12 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
+@media only screen and (max-width: 1157px) {
+   .team-conteiner{
+    max-width: 582px;
+  }
+}
+
 .team-conteiner .section-title {
     margin-bottom: 72px;
 }
@@ -630,6 +599,14 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
+.team-section .list-item{
+border-radius: 0px 0px 4px 4px;
+background: var(--primary-white-color);
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 /*For desktop*/
 @media only screen and (min-width: 1158px) {
 .team-section .list-item{
@@ -652,6 +629,7 @@ only screen and (min-resolution: 144dpi) {
 .employee-name .list-item {
     width: 40px;
     height: 40px;
+    box-shadow: none;
 }
 
 .team-icon {
@@ -692,12 +670,6 @@ only screen and (min-resolution: 144dpi) {
     }
 }
 
-/*For tablet*/
-@media only screen and (min-width: 768px) {
-.customers-section{
-    max-width: 552px;
-  }
-}
 
 /*For desktop*/
 @media only screen and (min-width: 1158px) {
@@ -705,6 +677,12 @@ only screen and (min-resolution: 144dpi) {
     padding: 120px 0;
     max-width: inherit;
   }
+}
+
+@media only screen and (max-width: 1157px) {
+.customers-conteiner {
+    max-width: 582px;
+    }
 }
 
 .customers-section-title {
@@ -725,14 +703,6 @@ only screen and (min-resolution: 144dpi) {
     column-gap: 16px;
     flex-wrap: wrap;
     }
-}
-
-
-@media only screen and (max-width: 767px) {
-.customers-section .list {
-    margin-right: 8px;
-    margin-left: 8px;
-  }
 }
 
 /*For tablet*/
@@ -757,7 +727,6 @@ only screen and (min-resolution: 144dpi) {
     display: flex;
     margin: 0 auto;
     height: 88px;
-  
 }
 
 /*For tablet*/
@@ -825,7 +794,6 @@ only screen and (min-resolution: 144dpi) {
 .footer-conteiner {
     display: flex;
     flex-direction: column;
-   
     }
 }
 
@@ -834,7 +802,7 @@ only screen and (min-resolution: 144dpi) {
     .footer-conteiner {
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 552px;
+        max-width: 582px;
         align-items: baseline;
         padding-right: 15px;
         padding-left: 15px;
@@ -852,7 +820,7 @@ only screen and (min-resolution: 144dpi) {
 }
 
 .footer-studio {
-    color: #f4f4fd;
+    color:var(--primary-button-background);
     display: inline-block;
 }
 
@@ -894,6 +862,8 @@ only screen and (min-resolution: 144dpi) {
 @media only screen and (min-width: 768px) {
 .description {
     padding-right: 24px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -932,7 +902,6 @@ only screen and (min-resolution: 144dpi) {
     width: 264px;
     margin-left: 0;   
     margin-right: 0;
-    margin-bottom: 16px;
   }
 }
 
@@ -1016,6 +985,7 @@ only screen and (min-resolution: 144dpi) {
 .footer-form {
     flex-direction: column;
     gap: 16px;
+    width: 100%;
   }
 }
 
@@ -1250,6 +1220,12 @@ only screen and (min-resolution: 144dpi) {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (max-width: 1157px) {
+.backdrop{
+    overflow: scroll;
+  }
+}
+
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -1259,19 +1235,19 @@ only screen and (min-resolution: 144dpi) {
 @media only screen and (max-width: 427px) {
 .modal {
     width: 320px;
-        min-height: 584px;
-        background-color: #FCFCFC;
-        border-radius: 4px;
-        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        transition-duration: 2s;
-        transition-delay: 400ms;
-        transition-timing-function: linear;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 72px 24px 24px 24px;
+    min-height: 584px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 2s;
+    transition-delay: 400ms;
+    transition-timing-function: linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
   }
 }
 
@@ -1279,19 +1255,26 @@ only screen and (min-resolution: 144dpi) {
 .modal {
     width: 408px;
     min-height: 584px;
-        background-color: #FCFCFC;
-        border-radius: 4px;
-        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        transition-duration: 2s;
-        transition-delay: 400ms;
-        transition-timing-function: linear;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 72px 24px 24px 24px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) ;
+    transition-duration: 2s;
+    transition-delay: 400ms;
+    transition-timing-function: linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
     
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
@@ -1546,13 +1529,26 @@ only screen and (min-resolution: 144dpi) {
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 24px;
     background-color: transparent;
     cursor: pointer;
     border: none;
     border-radius: 50%;
     outline: none;
     stroke: var(--primary-dark-color);
+}
+
+.menu-toggle-back{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-button-background);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 768px) {
@@ -1591,6 +1587,13 @@ only screen and (min-resolution: 144dpi) {
     color: var(--primary-white-color);
 }
 
+.menu-container .menu-toggle-back {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: var(--primary-white-color);
+}
+
 .mobile-menu-item {
     display: flex;
     gap: 40px;
@@ -1611,6 +1614,10 @@ only screen and (min-resolution: 144dpi) {
     text-decoration: none;
 }
 
+.active{
+    color: var(--primary-button-color);
+}
+
 .mobile-menu-link:hover {
     color: var(--primary-button-color);
 }
@@ -1619,7 +1626,6 @@ only screen and (min-resolution: 144dpi) {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    
     margin-bottom: 48px; 
 }
 
@@ -1644,8 +1650,8 @@ only screen and (min-resolution: 144dpi) {
 
 .mobile-menu-icons .list {
     display: flex;
-    gap: 56px;
-    justify-content: start;
+    max-width: 328px;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 }
